@@ -1,3 +1,2 @@
-cd tmp
-cd holberton
+#!/bin/bash
 rm betty
