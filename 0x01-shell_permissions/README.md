@@ -32,4 +32,4 @@ This script changes, in the current working directory, the owner to `betty` and 
 ### 15-symbolic_link_permissions
 This script changes the owner of the file `_hello` to `betty` and the group to `holberton`.
 ### 16-if_only
-This script changes the owner of the file `hello` to `betty` if it is owned by user `guillaue`. 
+This script changes the owner of the file `hello` to `betty` if it is owned by user `guillaume`. 
