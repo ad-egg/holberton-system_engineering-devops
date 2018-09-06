@@ -27,4 +27,9 @@ This script adds execute permission to all subdirectories of the current working
 This script creates a directory named `dir_holberton` with permissions 751. 
 ### 13-change_group
 This script changes the group owner of file `hello` to `holberton`. 
-
+### 14-change_owner_and_group
+This script changes, in the current working directory, the owner to `betty` and the group to `holberton` for all of the files and directories. 
+### 15-symbolic_link_permissions
+This script changes the owner of the file `_hello` to `betty` and the group to `holberton`.
+### 16-if_only
+This script changes the owner of the file `hello` to `betty` if it is owned by user `guillaue`. 
