@@ -38,4 +38,38 @@ This script deletes all the files in the current working directory that end with
 This script, within the current working directory, creates the directory `welcome` which contains the directory `to` which contains the directory `holberton`. 
 ### 18-commas
 This script lists all (including hidden) of the files and directories of the current directory, with each entry separated by a comma (`,`) and ends directory names with a slash (`/`). 
-
+## 0x01-shell_permissions
+### 0-iam_betty
+This script changes your userID to `betty`.
+### 1-who_am_i
+This script prints your effective userid. 
+### 2-groups
+This script prints all the groups that the curent user is in.
+### 3-new_owner
+This script changes the file owner of `hello` to `betty`. 
+### 4-empty
+This script creates an empty file called `hello`.
+### 5-execute
+This script adds execute permission for the owner of the file named `hello`.
+### 6-multiple_permissions
+This script adds execute permission for the owner and group and read permission to other users to the file `hello`. 
+### 7-everybody
+This script adds execute permission to everyone for the file `hello`. 
+### 8-James_Bond
+This script sets the permissions of the file `hello` so that owner and group have no permission but other users have all the permissions. 
+### 9-John_Doe
+This script sets the permissions of the file `hello` to `-rwxr-x-wx`. 
+### 10-mirror_permissions
+This script sets the permissions of the file `hello` to those of the file `olleh`. 
+### 11-directories_permissions
+This script adds execute permission to all subdirectories of the current working directory for the owner, group, and other users. 
+### 12-directory_permissions
+This script creates a directory named `dir_holberton` with permissions 751. 
+### 13-change_group
+This script changes the group owner of file `hello` to `holberton`. 
+### 14-change_owner_and_group
+This script changes, in the current working directory, the owner to `betty` and the group to `holberton` for all of the files and directories. 
+### 15-symbolic_link_permissions
+This script changes the owner of the file `_hello` to `betty` and the group to `holberton`.
+### 16-if_only
+This script changes the owner of the file `hello` to `betty` if it is owned by user `guillaume`. 
