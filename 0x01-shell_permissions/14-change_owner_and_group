@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo chown betty */ */* chgrp holberton */ */*
+chgrp holberton */ */* sudo chown betty */ */* 
