@@ -30,7 +30,7 @@ This script prints all possible combinations of two letters except `oo`.
 This script prints a number with two decimal places and it will be stored in the environment variable `NUM`. 
 ### 14-decimal_to_hexadecimal
 This script converts a number from base 10 to base 16. 
-### 15. What happens when you type ls `*.c`
+### 15. What happens when you type `ls *.c`
 [This blog post](URL_TO_BLOG_POST_HERE) describes what happens when you type `ls *.c` and hit Enter in your shell. 
 ### 16. What is the difference between an hard link and a symbolic link? 
 [This blog post](URL_TO_BLOG_POST_HERE) explains what are hard and symbolic links in Linux,how to create them, and the difference between them.  
