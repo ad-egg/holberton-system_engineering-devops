@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# kills another bash script process
+kill $(ps aux | grep '4-to_infinity_and_beyond')
