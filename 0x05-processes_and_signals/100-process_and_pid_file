@@ -6,15 +6,14 @@
 # deletes the file /var/run/holbertonscript.pid and terminates itself when
 # receive SIGQUIT signal
 filen="/var/run/holbertonscript.pid"
-selfpid="$(pgrep -f '100-process_and_pid_file')"
-touch $filen
-echo "$selfpid" > $filen
+sudo touch $filen
+echo $$ > $filen
 i=1
 while [ $i -eq 1 ]
 do
     echo "To infinity and beyond"
     sleep 2
-    trap 'echo "I hate the kill command"; rm -f $filen; kill $$' SIGTERM
+    trap 'echo "I hate the kill command"; sudo rm $filen' SIGTERM
     trap 'echo "Y U no love me?!"' SIGINT
-    trap 'rm -f $filen; kill $$' SIGQUIT
+    trap 'sudo rm $filen' SIGQUIT
 done
