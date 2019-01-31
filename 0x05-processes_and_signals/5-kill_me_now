@@ -1,3 +1,4 @@
 #!/usr/bin/env bash
 # kills another bash script process
-kill $(ps aux | grep '4-to_infinity_and_beyond')
+the_man=$(pgrep -f ./4-to_infinity_and_beyond)
+kill "$the_man"
