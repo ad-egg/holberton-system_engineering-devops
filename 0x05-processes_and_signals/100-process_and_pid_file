@@ -16,5 +16,5 @@ do
     sleep 2
     trap 'echo "I hate the kill command"' SIGTERM
     trap 'echo "Y U no love me?!"' SIGINT
-    trap 'rm -f $filen; exit' SIGQUIT SIGTERM
+    trap 'rm -f $filen; kill -9 $(pgrep -f 100-process_and_pid_file)' SIGQUIT SIGTERM
 done
