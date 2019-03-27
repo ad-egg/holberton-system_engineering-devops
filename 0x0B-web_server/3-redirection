@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # installs nginx web server, nginx listen on port 80
-insertstr="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n\n"
+insertstr="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
 sudo apt-get update
 sudo apt-get -y install nginx
 echo "Holberton School for the win!" | sudo tee /usr/share/nginx/html/index.html
-sudo sed -i "37i $insertstr" /etc/nginx/sites-enabled/default
+sudo sed -i "37a $insertstr" /etc/nginx/sites-enabled/default
 sudo service nginx start
