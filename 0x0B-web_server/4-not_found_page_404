@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 # installs nginx web server, nginx listen on port 80
-findstr="\n\t/location / {"
-insertstr="\n\tlocation /redirect_me {\n\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}"
-errstr="\n\terror_page 404 /custom_404.html;\n\tlocatioin = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
+insertstr="\n\tlocation /redirect_me {\n\t\treturn 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n\t}\n"
+errstr="\n\terror_page 404 /custom_404.html;\n\tlocation = /custom_404.html {\n\t\troot /usr/share/nginx/html;\n\t\tinternal;\n\t}\n"
 sudo apt-get update
 sudo apt-get -y install nginx
-echo "Holberton School for the win!" | sudo tee /usr/share/nginx/html/index.html
-sudo sed "$findstr/i $insertstr" /etc/nginx/sites-enabled/default
-echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/custom_404.html
-sudo sed "$findstr/i $errstr" /etc/nginx/sites-enabled/default
+echo -e "Holberton School for the win!\n" | sudo tee /usr/share/nginx/html/index.html
+sudo sed -i "37a\ $insertstr" /etc/nginx/sites-enabled/default
+sudo sed -i "37a\ $errstr" /etc/nginx/sites-enabled/default
+echo -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/custom_404.html
 sudo service nginx start
