@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# script that displays information about subdomains
+domain=$1
+
+subdomain_info ()
+{
+    for arg
+    do
+        echo -n "The subdomain $arg is a "
+        dig "$arg"."$domain" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $4 " record and points to " $5}'
+    done
+}
+
+if [ $# -eq 1 ]
+then
+    subdomain_info 'www' 'lb-01' 'web-01' 'web-02'
+else
+   subdomain=$2
+   echo -n "The subdomain $subdomain is a "
+   dig "$subdomain"."$domain" | grep -A1 'ANSWER SECTION:' | tail -n 1 | awk '{print $4 " record and points to " $5}'
+fi
