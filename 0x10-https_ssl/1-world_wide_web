@@ -16,5 +16,5 @@ then
     subdomain_info 'www' 'lb-01' 'web-01' 'web-02'
 else
    subdomain=$2
-   subdomain_info "$2"
+   subdomain_info "$subdomain"
 fi
