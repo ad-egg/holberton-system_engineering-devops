@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# configures NGINX to run as user nginx instead of root
+chmod 700 /etc/nginx/nginx.conf
+sed -i 's/80/8080/' /etc/nginx/sites-enabled/default
+chown nginx:nginx /etc/nginx/nginx.conf
+pkill apache2
+sudo -u nginx service nginx restart
