@@ -14,4 +14,4 @@ chown nginx:nginx /etc/nginx/nginx.conf
 pkill apache2
 # reload and restart nginx
 sudo -u nginx service nginx reload
-sudo -u nginx service nginx start
+sudo -u nginx service nginx restart
