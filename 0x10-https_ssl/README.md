@@ -33,4 +33,6 @@ When only the parameter `domain` is provided, it displays information for its su
 
 When passed `domain` and `subdomain` parameters, displays information for the specified subdomain.
 ### 2-haproxy_ssl_termination
-This is my HAproxy configuration.
+This is my HAProxy configuration.
+### 100-redirect_http_to_https
+This is my HAProxy configuration.
