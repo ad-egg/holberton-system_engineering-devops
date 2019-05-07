@@ -22,6 +22,9 @@ if __name__ == "__main__":
     employee_name = user_info[0].get('name')
 
     with open("{}.csv".format(employee_id), mode='w') as csv_file:
-        writer = csv.writer(csv_file, delimiter=',',quotechar='"', quoting=csv.QUOTE_ALL)
+        writer = csv.writer(
+                csv_file, delimiter=',', quotechar='"', quoting=csv.QUOTE_ALL)
         for task in total_tasks:
-            writer.writerow(["{}".format(employee_id),"{}".format(employee_name),"{}".format(task.get('completed')),"{}".format(task.get('title'))])
+            writer.writerow(["{}".format(employee_id), "{}".format(
+                        employee_name), "{}".format(task.get(
+                                'completed')), "{}".format(task.get('title'))])
