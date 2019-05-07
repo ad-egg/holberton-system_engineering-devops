@@ -19,7 +19,7 @@ if __name__ == "__main__":
 
     total_tasks = r_todos.json()
     user_info = r_users.json()
-    employee_name = user_info[0].get('name')
+    employee_name = user_info[0].get('username')
 
     with open("{}.csv".format(employee_id), mode='w') as csv_file:
         writer = csv.writer(
