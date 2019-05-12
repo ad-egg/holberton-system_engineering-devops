@@ -6,6 +6,7 @@ titles of the first 10 hot posts listed for a given subreddit
 
 import requests
 
+
 def top_ten(subreddit):
     """
     function queries the Reddit API and prints the titles of the first 10 hot
@@ -14,7 +15,8 @@ def top_ten(subreddit):
 
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
     h = {'User-agent': 'ad-egg'}
-    r = requests.get(url, headers=h, allow_redirects=False, params={'limit': 10})
+    r = requests.get(
+            url, headers=h, allow_redirects=False, params={'limit': 10})
 
     if r.status_code == 200:
         req = r.json()
@@ -22,7 +24,7 @@ def top_ten(subreddit):
         children = data.get('children')
         if data is None or children is None:
             print('None')
-        else
+        else:
             for post in children:
                 post_data = post.get('data')
                 title = post_data.get('title')
